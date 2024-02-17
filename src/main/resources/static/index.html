@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="index.js"></script>
+    <style>
+        table {
+           border-block-style: solid;
+            border-collapse: separate;
+           border-spacing: 10px;
+        }
+        .output{
+            border-right-style: solid;
+        }
+    </style>
+</head>
+<body>
+<h1>Bestilling av kinobilletter</h1>
+<br> <br>
+<form id="opplysninger" onsubmit="event.preventDefault(); bestill();">
+    <label for="film">Velg film:</label>
+    <select id="film"  required>
+        <option value="" disabled selected> Velg et film </option>
+        <option value="JOHN WICK: CHAPTER 4 "> JOHN WICK: CHAPTER 4 </option>
+        <option value="Olsenbanden - Siste Skrik"> Olsenbanden - Siste Skrik </option>
+        <option value="The Way of Water "> The Way of Water </option>
+        <option value="No Way Home "> No Way Home </option>
+    </select><br><br>
+
+    <label for="antall">Antall</label>
+    <input type="" id="antall" required pattern="^[1-9][0-9]*$" style="width: 50px"> <br><br>
+
+    <table>
+        <tr>
+            <td> Fornavn </td>
+            <td> <input type="text" id="fornavn" placeholder="Vidar" required pattern="[A-Za-z]+"> </td>
+        </tr>
+        <tr>
+            <td> Etternavn </td>
+            <td> <input type="text" id="etternavn" placeholder="Olsen" required pattern="[A-Za-z]+"> </td>
+        </tr>
+        <tr>
+            <td> Telefonnr </td>
+            <td> <input type="text" id="telefonnr" placeholder="99911999" required pattern="^[1-9][0-9]{7}$">  </td>
+        </tr>
+        <tr>
+            <td> Epost </td>
+            <td> <input type="email" id="epost" placeholder="Ola.Olsen@gmail.com" required> </td>
+        </tr>
+    </table> <br>
+    <button type="submit" id="bestill_knapp" > Kjøp billett</button>
+</form> <br> <br>
+
+<h2> Alle billetter</h2>
+<table id="billetter">
+    <tr>
+        <th> Film </th>
+        <th> Antall </th>
+        <th> Fornavn </th>
+        <th> Etternavn </th>
+        <th> Telefon_nr </th>
+        <th> Epost </th>
+    </tr>
+</table> <br>
+<button type="button" onclick="slett();">Slett alle billetter</button>
+</body>
+</html>
