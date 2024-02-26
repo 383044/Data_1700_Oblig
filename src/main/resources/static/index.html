@@ -20,7 +20,7 @@
 <br> <br>
 <form id="opplysninger" onsubmit="event.preventDefault(); bestill();">
     <label for="film">Velg film:</label>
-    <select id="film"  required>
+    <select id="film">
         <option value="" disabled selected> Velg et film </option>
         <option value="JOHN WICK: CHAPTER 4 "> JOHN WICK: CHAPTER 4 </option>
         <option value="Olsenbanden - Siste Skrik"> Olsenbanden - Siste Skrik </option>
@@ -29,24 +29,24 @@
     </select><br><br>
 
     <label for="antall">Antall</label>
-    <input type="" id="antall" required pattern="^[1-9][0-9]*$" style="width: 50px"> <br><br>
+    <input type="" id="antall"  style="width: 50px"> <br><br>
 
     <table>
         <tr>
             <td> Fornavn </td>
-            <td> <input type="text" id="fornavn" placeholder="Vidar" required pattern="[A-Za-z]+"> </td>
+            <td> <input type="text" id="fornavn" placeholder="Vidar" > </td>
         </tr>
         <tr>
             <td> Etternavn </td>
-            <td> <input type="text" id="etternavn" placeholder="Olsen" required pattern="[A-Za-z]+"> </td>
+            <td> <input type="text" id="etternavn" placeholder="Olsen"> </td>
         </tr>
         <tr>
             <td> Telefonnr </td>
-            <td> <input type="text" id="telefonnr" placeholder="99911999" required pattern="^[1-9][0-9]{7}$">  </td>
+            <td> <input type="text" id="telefonnr" placeholder="99911999">  </td>
         </tr>
         <tr>
             <td> Epost </td>
-            <td> <input type="email" id="epost" placeholder="Ola.Olsen@gmail.com" required> </td>
+            <td> <input type="text" id="epost" placeholder="Ola.Olsen@gmail.com"> </td>
         </tr>
     </table> <br>
     <button type="submit" id="bestill_knapp" > Kjøp billett</button>

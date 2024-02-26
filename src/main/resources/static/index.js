@@ -12,7 +12,44 @@ function bestill() {
      const innEpost = document.getElementById("epost").value;
 
 
-     //Definering av et objekt for input-dataene.
+    //Regex for telefonnummer (8 siffer)
+    const telefonRegex = /^[1-9]\d{7}$/;
+    //Regex for e-postadresse
+    const epostRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Validering av alle felt
+    if (innFilm.trim() === "") {
+        alert("Vennligst velg en film.");
+        return;
+    }
+
+    if (innAntall.trim() === "" || !innAntall.match(/^[1-9]\d*$/)) {
+        alert("Vennligst skriv inn et gyldig antall billetter.");
+        return;
+    }
+
+    if (innFornavn.trim() === "" || !innFornavn.match(/^[A-Za-z]+$/)) {
+        alert("Vennligst skriv inn et gyldig fornavn.");
+        return;
+    }
+
+    if (innEtternavn.trim() === "" || !innEtternavn.match(/^[A-Za-z]+$/)) {
+        alert("Vennligst skriv inn et gyldig etternavn.");
+        return;
+    }
+
+    if (innTelefonnr.trim() === "" || !innTelefonnr.match(telefonRegex)) {
+        alert("Vennligst skriv inn et gyldig telefonnummer.");
+        return;
+    }
+
+    if (innEpost.trim() === "" || !innEpost.match(epostRegex)) {
+        alert("Vennligst skriv inn en gyldig e-postadresse.");
+        return;
+    }
+
+
+    //Definering av et objekt for input-dataene.
      let enBestilling = {
          film: innFilm,
          antall: innAntall,
