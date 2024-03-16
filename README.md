@@ -17,3 +17,8 @@ som fornavn, etternavn, telefonnummer og e-postadresse.
 Når brukeren klikker på "Kjøp billett"-knappen, blir bestillingsinformasjonen 
 lagt til i en tabell under skjemaet. Det er også mulig å slette alle billettbestillinger
 ved å klikke på knappen "Slett alle billetter". 
+
+
+Oblig 2:
+Tok utgangspunkt i koden fra obligatorisk oppgave 1 og flyttet lagringen til tjener/server. 
+Brukt Spring Boot og Java for å lagre bestillingene i et array på tjener/server.
